@@ -1,7 +1,6 @@
 import './App.css';
 
 function Header(props){
-  console.log(props);
   return(
     <header>
       <h1>{props.name}'s Kitchen</h1>
@@ -13,6 +12,11 @@ function Main(props){
   return(
     <section>
       <p>Serving {props.adjective}, {props.cuisine} and {props.dietType} food to {props.location}</p>
+      <ul style={{textAlign: "left"}}>
+        {props.dishes.map((dish, i) => 
+          <li key={ dish.id }>{ dish.title }</li>
+          )}
+      </ul>
     </section>
   );
 }
@@ -23,11 +27,22 @@ function Footer(props){
   );
 }
 
+const dishes = [
+  "Quinoa and Kale Bowl",
+  "Tofu with Vegetables",
+  "Sweet Potato and Black Bean Burger",
+  "Minestrone"
+];
+
+const dishObjects = dishes.map((dish, i) => ({ id: i, title: dish }));
+
 function App() {
   return (
     <div className="App">
       <Header name="Laura"/>
-      <Main adjective="healthy" dietType="gluten-free" cuisine="Vegan" location="Milwaukee"/>
+      <Main adjective="healthy" dietType="gluten-free" cuisine="Vegan" location="Milwaukee"
+      dishes ={dishObjects}
+      />
       <Footer author="Laura White" year={new Date().getFullYear()}/>
       </div>
   );
