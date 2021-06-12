@@ -11,10 +11,10 @@ function AppTwo(){
 }
 
 ReactDOM.render(
-  <div>
-  <App />
-  <AppTwo />
-  </div>,
+  <React.Fragment>
+    <App />
+    <AppTwo />
+  </React.Fragment>,
   document.getElementById('root')
 );
 
