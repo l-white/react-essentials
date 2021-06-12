@@ -4,20 +4,17 @@ import './index.css';
 import App from './App';
 //import reportWebVitals from './reportWebVitals';
 
+function AppTwo(){
+  return(
+    <h1>This is the Second App</h1>
+  )
+}
+
 ReactDOM.render(
-  <App />,
-  /*
-  <ul>
-    <li>Monday</li>
-    <li>Tuesday</li>
-    <li>Wednesday</li>
-  </ul>,
-  */
-  /*
-  React.createElement("h1", 
-  {style: {color: "blue"}}, 
-  "Hello, React"),
-  */
+  <div>
+  <App />
+  <AppTwo />
+  </div>,
   document.getElementById('root')
 );
 

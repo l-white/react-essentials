@@ -14,7 +14,7 @@ function Main(props){
   return(
     <section>
       <p>Serving {props.adjective}, {props.cuisine} and {props.dietType} food to {props.location}</p>
-      <img src={restaurant} />
+      <img src={restaurant} height={200} alt="napkin and fork at restaurant table"/>
       <ul style={{textAlign: "left"}}>
         {props.dishes.map((dish, i) => 
           <li key={ dish.id }>{ dish.title }</li>
