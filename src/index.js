@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-//import reportWebVitals from './reportWebVitals';
+
+const [mostImportantItem] = ["boots", "tent", "headlamp"];
+console.log(mostImportantItem);
 
 ReactDOM.render(
-    <App />,
+    <App authorized={false}/>,
   document.getElementById('root')
 );
 
