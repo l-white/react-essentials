@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Body from './App';
+import Body from './Body';
 
 ReactDOM.render(
   <>

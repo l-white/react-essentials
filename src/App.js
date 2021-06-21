@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
+import Body from './Body';
+
 
 // https://api.github.com/users/l-white
 
@@ -31,9 +33,10 @@ function App({ login }) {
       <p>{data.location}</p>
       <img alt={data.login} src={data.avatar_url} height="200"/>
       <p>{data.name} is a web developer.</p>
+      <p>Body</p>
     </div>)
   }
-  return <div>No User Available</div>;
+  return (<div>No User Available</div>);
 }
 
 export default App;
